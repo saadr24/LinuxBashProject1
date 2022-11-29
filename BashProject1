@@ -23,4 +23,4 @@ done;
 (echo $loopEnd > last_index_file.txt 
 ) | zenity --info --width=200 --height=75 --timeout=5 --text "Ending file number is $loopEnd"
 
-~                                                                                                                                                                                          
+# zenity command will work on Ubuntu Linux Terminal                                                                                                                                                                                
