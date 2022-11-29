@@ -1,0 +1,24 @@
+#!/bin/bash
+
+# Get last index used to create file
+lastIndexUsed=`cat last_index_file.txt`
+
+if [ $lastIndexUsed ]
+then
+        loopStart=$(($lastIndexUsed + 1))
+        loopEnd=$(($lastIndexUsed + 25))
+else
+        loopStart=1
+        loopEnd=25
+fi
+
+# Start for loop
+for i in $(seq $loopStart $loopEnd);
+do
+        fileName='saad'$i
+        touch $fileName
+done;
+
+# Updated last index used by for loop, so that next time shell script can start with next set of values for file names
+echo $loopEnd > last_index_file.txt
+~                                                                                                                                                                                          
